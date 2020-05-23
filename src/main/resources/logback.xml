@@ -11,17 +11,17 @@
 
     <appender name="FILE"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>test.log</file>
+        <file>C:\test\logs\ui_autotest_winapp.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- Daily rollover -->
-            <fileNamePattern>test.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- daily rollover -->
+            <fileNamePattern>ui_autotest_winapp.%d{yyyy-MM-dd}.log</fileNamePattern>
 
-            <!-- Store logs for 10 days -->
+            <!-- store logs for 10 days -->
             <maxHistory>10</maxHistory>
 
-            <!-- Max logfile size 10MB -->
-            <totalSizeCap>10MB</totalSizeCap>
+            <!-- max logfile size 30MB -->
+            <totalSizeCap>30MB</totalSizeCap>
 
         </rollingPolicy>
         <encoder>
