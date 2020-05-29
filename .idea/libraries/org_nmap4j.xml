@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.nmap4j">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/org.nmap4j.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
