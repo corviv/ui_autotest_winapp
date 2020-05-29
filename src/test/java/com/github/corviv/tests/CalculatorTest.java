@@ -1,5 +1,9 @@
+package com.github.corviv.tests;
+
 import com.github.corviv.ListenerLogger;
 import com.github.corviv.Session;
+
+import com.github.corviv.pages.CalculatorPage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,20 +13,22 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(ListenerLogger.class)
-public class TestCalculator {
-    PageCalculator objExample = null;
+public class CalculatorTest {
+    CalculatorPage objExample = null;
     Session test_example = null;
-    private static final Logger logger = LoggerFactory.getLogger("TestCalculator");
+    private static final Logger logger = LoggerFactory.getLogger("CalculatorTest");
 
-    TestCalculator() {
+    CalculatorTest() {
         test_example = new Session();
     }
 
     @BeforeTest
     public void startDriver() {
+
         test_example.createSession();
-        //test_example.connectSession(PageCalculator.strAppWindowName);
-        objExample = new PageCalculator(Session.getDriverSession());
+        //test_example.connectSession(CalculatorPage.strAppWindowName);
+
+        objExample = new CalculatorPage(Session.getDriverSession());
     }
 
     @AfterTest
